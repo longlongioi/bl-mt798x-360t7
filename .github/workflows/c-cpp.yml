@@ -18,4 +18,4 @@ jobs:
     - name: make
       run: sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler
     - name: make check
-      run: SOC=mt7981 BOARD=360t7  MULTI_LAYOUT=1 ./build.sh
+      run: SOC=mt7981 BOARD=360t7 ./build.sh
