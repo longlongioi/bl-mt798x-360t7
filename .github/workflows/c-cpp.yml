@@ -19,3 +19,5 @@ jobs:
       run: sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler
     - name: make check
       run: SOC=mt7981 BOARD=360t7 ./build.sh
+    - name: move bin  
+      run: mv ./out/mt7981_360t7-fip-fixed-parts.bin .
