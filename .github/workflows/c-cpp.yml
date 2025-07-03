@@ -13,14 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: sudo apt update
-    - name: make
-      run: sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler
     - name: make check
-      run: SOC=mt7981 BOARD=360t7 ./build.sh
-    - name: ls
-      run: ls
+      run: SOC=mt7981 BOARD=360t7 MULTI_LAYOUT=1 ./build.sh
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
