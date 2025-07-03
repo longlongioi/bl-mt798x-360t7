@@ -20,7 +20,7 @@ jobs:
     - name: make check
       run: SOC=mt7981 BOARD=360t7 ./build.sh
     - name: move bin  
-      run: mv /out/mt7981_360t7-fip-fixed-parts.bin .
+      run: mv /output/mt7981_360t7-fip-fixed-parts.bin .
     - name: move fib
       run: mv /home/runner/work/bl-mt798x-360t7/bl-mt798x-360t7/atf-20231013-0ea67d76a/build/mt7981/release/fip.bin .
     - name: pwd
