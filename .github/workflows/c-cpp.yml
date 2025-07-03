@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: configure
+      run: sudo apt update
+    - name: make
+      run: sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler
+    - name: make check
+      run: SOC=mt7981 BOARD=360t7  MULTI_LAYOUT=1 ./build.sh
