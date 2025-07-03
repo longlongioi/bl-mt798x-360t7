@@ -47,6 +47,13 @@
 			mtdids = "nmbm0=nmbm0";
 			mtdparts = "nmbm0:1024k(bl2),256k(Nvram),256k(Bdata),2048k(factory),2048k(fip),256k(crash),256k(crash_log),100m(ubi),12m(data),256k(KF)";
 		};
+		
+		layout@3 {
+			label = "360t7";
+			// mtd layout for 360t7
+			mtdids = "nmbm0=nmbm0";
+			mtdparts = "nmbm0:1024k(bl2),512k(u-boot-env),2048k(Factory),2048k(fip),36M(firmware-1),36M(ubi),36M(plugin),1M(config),512k(factory),7M(log)";
+		};
 	};
 
 	gpio-keys {
